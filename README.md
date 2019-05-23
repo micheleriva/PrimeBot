@@ -1,0 +1,1 @@
+<img src="/docs/GitHubCover.png" width="100%" align="center" />
