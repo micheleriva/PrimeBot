@@ -11,3 +11,5 @@ defmodule Primetweetbot do
   end
 
 end
+
+Primetweetbot.run()
