@@ -1,6 +1,6 @@
 <img src="/docs/GitHubCover.png" width="100%" align="center" />
 
-<div align="center>
+<div align="center">
   <a href="https://www.paypal.me/micheleriva" target="_blank" align="center">
     <img src="/docs/sponsorship.png" width="250px" align="center" />
   </a>
