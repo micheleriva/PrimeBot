@@ -13,3 +13,4 @@ defmodule Primetweetbot do
 end
 
 Primetweetbot.run()
+System.halt(0)
