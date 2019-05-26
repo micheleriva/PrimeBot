@@ -1,9 +1,11 @@
 defmodule Primetweetbot.Twitter do
 
+  alias Primetweetbot.Day
+
   def send_tweet(day, prime) do
-    with status = "#{day}th prime number is #{prime}" do
-      ExTwitter.update(status)
-    end
+    tweetDay = Day.suffix(day)
+    status   = "#{tweetDay} prime number is #{prime}"
+    ExTwitter.update(status)
   end
 
 end

@@ -1,24 +1,23 @@
 defmodule Primetweetbot.Primes do
 
+  def nth_prime(1),   do: 2
+  def nth_prime(2),   do: 3
   def nth_prime(num) do
-    cond do
-      num == 1 -> 2
-      num == 2 -> 3
-      true     -> find_prime(nth_prime(num - 1) + 2)
-    end
+     nth_prime(num - 1) + 2
+     |> find_prime
   end
 
+  def find_prime(2),   do: 2
   def find_prime(num) do
     cond do
-      num == 2      -> 2
-      is_prime(num) -> num
-      true          -> find_prime(num + 2)
+      is_prime?(num) -> num
+      true           -> find_prime(num + 2)
     end
   end
 
-  def is_prime(num) do
+  def is_prime?(num) when num < 2, do: false
+  def is_prime?(num) do
     cond do
-      num < 2                  -> false
       Integer.mod(num, 2) == 0 -> false
       true                     -> test_prime(num, 3)
     end
