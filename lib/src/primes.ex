@@ -9,9 +9,9 @@ defmodule Primetweetbot.Primes do
 
   def find_prime(2),   do: 2
   def find_prime(num) do
-    cond do
-      is_prime?(num) -> num
-      true           -> find_prime(num + 2)
+    case is_prime?(num) do
+      true -> num
+      _    -> find_prime(num + 2)
     end
   end
 
